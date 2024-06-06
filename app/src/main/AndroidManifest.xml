@@ -13,28 +13,28 @@
         android:theme="@style/Theme.TiendaFake"
         tools:targetApi="31">
         <activity
-            android:name=".sections.Seccion1"
+            android:name=".components.product_card"
             android:exported="false" />
+        <activity
+            android:name=".sections.Seccion1"
+            android:exported="true" />
         <activity
             android:name=".sections.Seccion2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".sections.Seccion3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".sections.Seccion4"
             android:exported="false" />
         <activity
             android:name=".sections.Seccion5"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".modals.EscribirNombre"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Information"
-            android:exported="false" />
-        <activity
-            android:name=".Address"
             android:exported="true" />
         <activity
             android:name=".Menu"

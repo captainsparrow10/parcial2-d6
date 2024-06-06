@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".sections.Seccion2"
     android:layout_marginTop="30dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -38,6 +39,7 @@
         android:id="@+id/btnInicio"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:layout_gravity="end"
         android:layout_alignParentRight="true"
         android:text="Inicio"
         android:textSize="15dp"

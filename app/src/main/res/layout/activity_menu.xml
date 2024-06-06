@@ -14,12 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
+            android:textAlignment="center"
             android:layout_height="40dp"
             android:layout_gravity="top"
             android:layout_marginBottom="8dp"
             android:background="#7d2181"
-            android:gravity=""
+            android:gravity="center"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="Menu"
@@ -42,6 +43,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text=""
+        android:layout_marginBottom="20dp"
         android:textStyle="bold"/>
 
     <TextView

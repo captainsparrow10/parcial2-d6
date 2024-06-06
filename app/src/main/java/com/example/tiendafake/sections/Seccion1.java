@@ -11,12 +11,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tiendafake.MainActivity;
 import com.example.tiendafake.Menu;
 import com.example.tiendafake.R;
+import com.example.tiendafake.adapters.ProductAdapter;
+import com.example.tiendafake.models.Product;
+
+import java.util.ArrayList;
 
 public class Seccion1 extends AppCompatActivity {
+
+    ArrayList<Product> products;
+    ProductAdapter adapter;
+    RecyclerView playout;
 
     private String name;
     private TextView tvName;
@@ -34,6 +45,22 @@ public class Seccion1 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        playout = findViewById(R.id.productcard);
+
+        products = new ArrayList<>();
+        products.add(new Product(R.drawable.abrigo6, 1, "abrigo", "12"));
+        products.add(new Product(R.drawable.abrigo6, 2, "abrigo", "12"));
+        products.add(new Product(R.drawable.abrigo6, 3, "abrigo", "12"));
+        products.add(new Product(R.drawable.abrigo6, 4, "abrigo", "12"));
+        products.add(new Product(R.drawable.abrigo6, 5, "abrigo", "12"));
+        products.add(new Product(R.drawable.abrigo6, 6, "abrigo", "12"));
+
+
+        adapter = new ProductAdapter(products, this);
+        playout.setAdapter(adapter);
+        playout.setLayoutManager(new GridLayoutManager(this, 2));
+
 
         bMenu = findViewById(R.id.seccion1Btn);
         inicio = findViewById(R.id.btnInicio);
