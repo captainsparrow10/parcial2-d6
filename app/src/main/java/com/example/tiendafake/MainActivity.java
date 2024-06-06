@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.tiendafake.modals.EscribirNombre;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToMenu (){
-        Intent intent = new Intent( this, Menu.class );
+        Intent intent = new Intent( this, EscribirNombre.class );
         startActivity(intent);
     }
 
