@@ -80,7 +80,7 @@ public class Seccion2 extends AppCompatActivity {
 
         name = getIntent().getStringExtra("name");
         if (name != null) {
-            tvName.setText(name);
+            tvName.setText("Usuario: " +name);
         }
     }
 
