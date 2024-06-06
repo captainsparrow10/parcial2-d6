@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void navigateToSchedule (){
         Intent intent = new Intent( this, Schedule.class );
+        intent.putExtra("name", name);
         startActivity(intent);
     }
 
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void navigateToInformation (){
         Intent intent = new Intent( this, Information.class );
+        intent.putExtra("name", name);
         startActivity(intent);
     }
 

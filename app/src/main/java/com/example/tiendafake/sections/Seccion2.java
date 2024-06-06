@@ -1,4 +1,4 @@
-package com.example.tiendafake;
+package com.example.tiendafake.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,25 +12,24 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Information extends AppCompatActivity {
+import com.example.tiendafake.MainActivity;
+import com.example.tiendafake.Menu;
+import com.example.tiendafake.R;
+
+public class Seccion2 extends AppCompatActivity {
 
     private String name;
     private TextView tvName;
+    private Button bMenu;
+    private Button inicio;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_information);
-        Button buttonNavigateToMain= findViewById(R.id.btn_navigate_to_main);
-
-        buttonNavigateToMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navigateToMain();
-            }
-        });
+        setContentView(R.layout.activity_seccion2);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -39,10 +38,31 @@ public class Information extends AppCompatActivity {
 
         tvName = findViewById(R.id.tvName);
 
+        bMenu = findViewById(R.id.seccion1Btn);
+        inicio = findViewById(R.id.btnInicio);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToMain();
+            }
+        });
+        bMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToMenu();
+            }
+        });
+
         name = getIntent().getStringExtra("name");
         if (name != null) {
             tvName.setText(name);
         }
+    }
+
+    public void navigateToMenu (){
+        Intent intent = new Intent( this, Menu.class );
+        intent.putExtra("name", name);
+        startActivity(intent);
     }
 
     public void navigateToMain (){
