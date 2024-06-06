@@ -38,4 +38,11 @@
         android:text="Domingo no trabajamos"
         android:layout_marginBottom="16sp"
         />
+
+    <Button
+        android:id="@+id/btn_navigate_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        />
 </LinearLayout>
