@@ -11,10 +11,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tiendafake.MainActivity;
 import com.example.tiendafake.Menu;
 import com.example.tiendafake.R;
+import com.example.tiendafake.adapters.ProductAdapter;
+import com.example.tiendafake.models.Product;
+
+import java.util.ArrayList;
 
 public class Seccion4 extends AppCompatActivity {
 
@@ -22,7 +28,9 @@ public class Seccion4 extends AppCompatActivity {
     private TextView tvName;
     private Button bMenu;
     private Button inicio;
-
+    ArrayList<Product> products;
+    ProductAdapter adapter;
+    RecyclerView playout;
 
 
     @Override
@@ -35,6 +43,24 @@ public class Seccion4 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        playout = findViewById(R.id.productcard);
+
+        products = new ArrayList<>();
+        products.add(new Product(R.drawable.gorra1, 1, "Gorra 1", "12"));
+        products.add(new Product(R.drawable.gorra2, 2, "Gorra 2", "50"));
+        products.add(new Product(R.drawable.gorra3, 3, "Gorra 3", "10"));
+        products.add(new Product(R.drawable.gorra4, 4, "Gorra 4", "12"));
+        products.add(new Product(R.drawable.gorra5, 5, "Gorra 5", "9"));
+        products.add(new Product(R.drawable.gorra6, 6, "Gorra 6", "12"));
+        products.add(new Product(R.drawable.gorra7, 7, "Gorra 7", "20"));
+        products.add(new Product(R.drawable.gorra8, 8, "Gorra 8", "12"));
+        products.add(new Product(R.drawable.gorra9, 9, "Gorra 9", "1152"));
+        products.add(new Product(R.drawable.gorra10, 10, "Gorra 10", "12"));
+
+        adapter = new ProductAdapter(products, this);
+        playout.setAdapter(adapter);
+        playout.setLayoutManager(new GridLayoutManager(this, 2));
 
         tvName = findViewById(R.id.tvName);
 

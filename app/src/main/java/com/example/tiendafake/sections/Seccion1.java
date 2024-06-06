@@ -49,13 +49,16 @@ public class Seccion1 extends AppCompatActivity {
         playout = findViewById(R.id.productcard);
 
         products = new ArrayList<>();
-        products.add(new Product(R.drawable.abrigo6, 1, "abrigo", "12"));
-        products.add(new Product(R.drawable.abrigo6, 2, "abrigo", "12"));
-        products.add(new Product(R.drawable.abrigo6, 3, "abrigo", "12"));
-        products.add(new Product(R.drawable.abrigo6, 4, "abrigo", "12"));
-        products.add(new Product(R.drawable.abrigo6, 5, "abrigo", "12"));
-        products.add(new Product(R.drawable.abrigo6, 6, "abrigo", "12"));
-
+        products.add(new Product(R.drawable.pelota1, 1, "Pelota 1", "12"));
+        products.add(new Product(R.drawable.pelota2, 2, "Pelota 2", "50"));
+        products.add(new Product(R.drawable.pelota3, 3, "Pelota 3", "10"));
+        products.add(new Product(R.drawable.pelota4, 4, "Pelota 4", "12"));
+        products.add(new Product(R.drawable.pelota5, 5, "Pelota 5", "9"));
+        products.add(new Product(R.drawable.pelota6, 6, "Pelota 6", "12"));
+        products.add(new Product(R.drawable.pelota7, 7, "Pelota 7", "20"));
+        products.add(new Product(R.drawable.pelota8, 8, "Pelota 8", "12"));
+        products.add(new Product(R.drawable.pelota9, 9, "Pelota 9", "1152"));
+        products.add(new Product(R.drawable.pelota10, 10, "Pelota 10", "12"));
 
         adapter = new ProductAdapter(products, this);
         playout.setAdapter(adapter);
