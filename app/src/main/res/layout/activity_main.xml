@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:paddingHorizontal="24sp"
-    tools:context=".welcome">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvName"
@@ -25,7 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bienvenidos a tienda fake"
-        android:textSize="24sp"
+        android:textColor="#000"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
         android:layout_marginBottom="24sp"
         />
 

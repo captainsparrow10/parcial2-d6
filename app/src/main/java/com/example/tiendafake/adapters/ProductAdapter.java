@@ -37,7 +37,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.viewHold
         final Product products = plist.get(position);
         holder.pimage.setImageResource(products.getImage());
         holder.detail.setText(products.getTitle());
-        holder.detail.setText(products.getTitle());
+        holder.price.setText(products.getPrice());
 
     }
 
