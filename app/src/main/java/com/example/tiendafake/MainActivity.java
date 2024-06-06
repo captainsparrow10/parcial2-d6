@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.tiendafake.modals.EscribirNombre;
 
 public class MainActivity extends AppCompatActivity {
+
+    private String name;
+    private TextView tvName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
         Button buttonNavigateToMenu = findViewById(R.id.btn_navigate_to_menu);
         Button buttonNavigateToSchedule = findViewById(R.id.btn_navigate_to_schedule);
         Button buttonNavigateToInformation= findViewById(R.id.btn_navigate_to_information);
+
+        tvName = findViewById(R.id.tvName);
+
+        name = getIntent().getStringExtra("name");
+        if (name != null) {
+            tvName.setText(name);
+        }
 
         buttonNavigateToMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,8 +69,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToMenu (){
-        Intent intent = new Intent( this, EscribirNombre.class );
-        startActivity(intent);
+
+        if (name != null) {
+            Intent intent = new Intent( this, Menu.class );
+            intent.putExtra("name", name);
+            startActivity(intent);
+
+        } else {
+            Intent intent = new Intent( this, EscribirNombre.class );
+            startActivity(intent);
+        }
+
+
     }
 
     public void navigateToInformation (){
