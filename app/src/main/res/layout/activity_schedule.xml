@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
    android:orientation="vertical"
     android:gravity="center"
+    android:layout_marginHorizontal="24dp"
     tools:context=".Schedule">
     <TextView
         android:id="@+id/tvName"
@@ -14,35 +15,32 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Horario"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
          android:layout_marginBottom="24sp"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="Lunes a Viernes: 10 a.m. a 8:00 p.m."
+        android:textColor="@color/black"
+        android:text="Lunes a Viernes: 7 A.M. a 8:00 P.M"
         android:layout_marginBottom="16sp"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="Sabado: 10 a.m. a 4:00 p.m."
+        android:textColor="@color/black"
+        android:text="Sabado: 10 A.M. a 4:00 P.M"
         android:layout_marginBottom="16sp"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="Domingo no trabajamos"
-        android:layout_marginBottom="16sp"
-        />
 
     <Button
         android:id="@+id/btn_navigate_to_main"

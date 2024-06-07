@@ -8,20 +8,20 @@
     tools:context=".modals.EscribirNombre"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    android:paddingHorizontal="24sp"
+    android:layout_marginHorizontal="24dp"
     >
 
     <EditText
         android:id="@+id/enET1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Escriba su nombre aquí para continuar"/>
+        android:hint="Escriba su nombre para continuar"/>
 
     <Button
         android:id="@+id/enB1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Continuar"/>
+        android:text="Acceder a menu"/>
 
 
 </LinearLayout>
