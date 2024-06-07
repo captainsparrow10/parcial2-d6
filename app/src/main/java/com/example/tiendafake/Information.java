@@ -41,7 +41,7 @@ public class Information extends AppCompatActivity {
 
         name = getIntent().getStringExtra("name");
         if (name != null) {
-            tvName.setText("Usuario: " + name);
+            tvName.setText("Usuario actual: " + name);
         }
     }
 

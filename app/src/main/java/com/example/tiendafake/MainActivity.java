@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         name = getIntent().getStringExtra("name");
         if (name != null) {
-            tvName.setText("Usuario: "+ name);
+            tvName.setText("Usuario actual: "+ name);
         }
 
         buttonNavigateToMenu.setOnClickListener(new View.OnClickListener() {
